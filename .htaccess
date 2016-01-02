@@ -1,0 +1,11 @@
+# BEGIN CNT
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .*security.html /NEW/cnt-security.php [L]
+RewriteRule ^sitemap.xml /NEW/cnt-sitemap.php [L]
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /NEW/index.php [L]
+</IfModule>
+# END CNT
